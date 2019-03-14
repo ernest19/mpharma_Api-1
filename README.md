@@ -18,16 +18,18 @@ Navigate into your cloned app "mpharma" in your terminal
 
 run  "docker build ."
 
+# creates the tables 
 run "docker-compose run web python /code/manage.py migrate --noinput"
 
 run "docker-compose up -d --build"
 
-After running  "docker-compose up -d --build"  the system goes to the github account to populate the postgresql database in docker .
+After running  "docker-compose up -d --build"  the system goes to the github account to populate the postgresql database in docker 
 
-the system checks on the repository every 15 minutes to check for new records 
+the system checks on the repository every 15 minutes to check for new records at the background
 
 
 finally run this url in your browser 
+
 127.0.0.1:8000/cdiapi
 
 click on the  to access   "http://127.0.0.1:8000/cdiapicdiapi/"
