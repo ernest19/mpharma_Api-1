@@ -1,0 +1,46 @@
+[2019-03-12 15:13:57,236: INFO/MainProcess] Connected to redis://localhost:6379//
+[2019-03-12 15:13:57,242: INFO/MainProcess] mingle: searching for neighbors
+[2019-03-12 15:13:58,247: INFO/MainProcess] mingle: all alone
+[2019-03-12 15:13:58,278: WARNING/MainProcess] /home/ernest/Env/django/local/lib/python2.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2019-03-12 15:13:58,278: WARNING/MainProcess] w1@ernest-HP-ENVY-m7-Notebook ready.
+[2019-03-12 15:14:24,051: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:21:20,141: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:36:38,374: INFO/MainProcess] missed heartbeat from celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:39:12,930: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:40:23,943: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:40:50,362: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:41:11,051: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:43:16,370: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:45:47,254: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:48:05,823: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:51:31,154: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:55:11,537: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 15:59:15,159: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 16:00:53,505: INFO/MainProcess] sync with celery@ernest-HP-ENVY-m7-Notebook
+[2019-03-12 16:00:56,451: ERROR/MainProcess] Received unregistered task of type u'apiApp.views.csvView'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you are using relative imports?
+Please see http://bit.ly/gLye1c for more information.
+
+The full contents of the message body was:
+{u'utc': True, u'chord': None, u'args': [], u'retries': 0, u'expires': None, u'task': u'apiApp.views.csvView', u'callbacks': None, u'errbacks': None, u'timelimit': [None, None], u'taskset': None, u'kwargs': {}, u'eta': None, u'id': u'edc24abe-f2cb-4836-b19d-568ce2bad012'} (257b)
+Traceback (most recent call last):
+  File "/home/ernest/Env/django/local/lib/python2.7/site-packages/celery/worker/consumer.py", line 455, in on_task_received
+    strategies[name](message, body,
+KeyError: u'apiApp.views.csvView'
+[2019-03-12 16:04:00,051: ERROR/MainProcess] Received unregistered task of type u'apiApp.views.csvView'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you are using relative imports?
+Please see http://bit.ly/gLye1c for more information.
+
+The full contents of the message body was:
+{u'utc': True, u'chord': None, u'args': [], u'retries': 0, u'expires': None, u'task': u'apiApp.views.csvView', u'callbacks': None, u'errbacks': None, u'timelimit': [None, None], u'taskset': None, u'kwargs': {}, u'eta': None, u'id': u'8a74e6b4-a795-4058-840b-25fea1fabe48'} (257b)
+Traceback (most recent call last):
+  File "/home/ernest/Env/django/local/lib/python2.7/site-packages/celery/worker/consumer.py", line 455, in on_task_received
+    strategies[name](message, body,
+KeyError: u'apiApp.views.csvView'

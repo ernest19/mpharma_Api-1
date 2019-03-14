@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+  redis:
+    image: redis:alpine
+    # command: systemctl restart redis-server
+    ports:
+      - 6380:6380
+  db:
+    image: postgres:10.1-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: admin
+  web:
+    build: .
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+      - redis
+  celery:
+    build: .
+    command: celery -A mpharma worker -l info
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+      - redis
+  celery-beat:
+    build: .
+    command: celery -A mpharma beat -l info
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+      - redis
+
+
+volumes:
+  postgres_data:
